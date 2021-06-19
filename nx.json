@@ -12,16 +12,32 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "NzZhYzQzOTEtNTI5Ny00NjljLTljNmEtMGE4ZGNiYmUwZDE1fHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "angular-base-space-x-graphql": {
+      "tags": []
+    },
+    "angular-base-space-x-graphql-e2e": {
+      "tags": [],
+      "implicitDependencies": ["angular-base-space-x-graphql"]
+    },
+    "node-js-backend-api": {
+      "tags": []
+    },
+    "react-base-to-do-app": {
+      "tags": []
+    },
+    "react-base-to-do-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["react-base-to-do-app"]
+    }
+  }
 }
