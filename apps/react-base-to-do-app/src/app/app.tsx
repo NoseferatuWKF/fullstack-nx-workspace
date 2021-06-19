@@ -1,17 +1,14 @@
 import styles from './app.module.css';
 
-import { ReactComponent as Logo } from './logo.svg';
 import star from './star.svg';
 
 import { Route, Link } from 'react-router-dom';
+import Header from './header/header';
 
 export function App() {
   return (
     <div className={styles.app}>
-      <header className="flex">
-        <Logo width="75" height="75" />
-        <h1>Welcome to react-base-to-do-app!</h1>
-      </header>
+      <Header></Header>
       <main>
         <h2>Resources &amp; Tools</h2>
         <p>Thank you for using and showing some ♥ for Nx.</p>
