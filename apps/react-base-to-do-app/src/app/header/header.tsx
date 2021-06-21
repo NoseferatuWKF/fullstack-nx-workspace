@@ -1,5 +1,5 @@
 import './header.module.css';
-import { ReactComponent as Logo } from './logo.svg';
+import { ReactComponent as Logo } from '../logo.svg';
 
 /* eslint-disable-next-line */
 export interface HeaderProps {}
