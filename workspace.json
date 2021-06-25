@@ -9,9 +9,7 @@
       "targets": {
         "build": {
           "executor": "@angular-devkit/build-angular:browser",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/angular-base-space-x-graphql",
             "index": "apps/angular-base-space-x-graphql/src/index.html",
@@ -22,9 +20,7 @@
               "apps/angular-base-space-x-graphql/src/favicon.ico",
               "apps/angular-base-space-x-graphql/src/assets"
             ],
-            "styles": [
-              "apps/angular-base-space-x-graphql/src/styles.css"
-            ],
+            "styles": ["apps/angular-base-space-x-graphql/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -89,9 +85,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/angular-base-space-x-graphql"
-          ],
+          "outputs": ["coverage/apps/angular-base-space-x-graphql"],
           "options": {
             "jestConfig": "apps/angular-base-space-x-graphql/jest.config.js",
             "passWithNoTests": true
@@ -134,16 +128,12 @@
       "targets": {
         "build": {
           "executor": "@nrwl/node:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/node-js-backend-api",
             "main": "apps/node-js-backend-api/src/main.ts",
             "tsConfig": "apps/node-js-backend-api/tsconfig.app.json",
-            "assets": [
-              "apps/node-js-backend-api/src/assets"
-            ]
+            "assets": ["apps/node-js-backend-api/src/assets"]
           },
           "configurations": {
             "production": {
@@ -168,16 +158,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/node-js-backend-api/**/*.ts"
-            ]
+            "lintFilePatterns": ["apps/node-js-backend-api/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/node-js-backend-api"
-          ],
+          "outputs": ["coverage/apps/node-js-backend-api"],
           "options": {
             "jestConfig": "apps/node-js-backend-api/jest.config.js",
             "passWithNoTests": true
@@ -192,9 +178,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/react-base-to-do-app",
             "index": "apps/react-base-to-do-app/src/index.html",
@@ -205,9 +189,7 @@
               "apps/react-base-to-do-app/src/favicon.ico",
               "apps/react-base-to-do-app/src/assets"
             ],
-            "styles": [
-              "apps/react-base-to-do-app/src/styles.css"
-            ],
+            "styles": ["apps/react-base-to-do-app/src/styles.css"],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -259,9 +241,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/react-base-to-do-app"
-          ],
+          "outputs": ["coverage/apps/react-base-to-do-app"],
           "options": {
             "jestConfig": "apps/react-base-to-do-app/jest.config.js",
             "passWithNoTests": true
@@ -290,9 +270,7 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/react-base-to-do-app-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/react-base-to-do-app-e2e/**/*.{js,ts}"]
           }
         }
       }

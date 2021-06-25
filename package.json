@@ -2,6 +2,7 @@
   "name": "nx-workspace",
   "version": "0.0.0",
   "license": "MIT",
+  "proxy": "http://localhost:3333",
   "scripts": {
     "nx": "nx",
     "start": "nx serve",
@@ -36,6 +37,8 @@
     "@angular/platform-browser": "^12.0.0",
     "@angular/platform-browser-dynamic": "^12.0.0",
     "@angular/router": "^12.0.0",
+    "axios": "^0.21.1",
+    "bulma-start": "^0.0.4",
     "core-js": "^3.6.5",
     "document-register-element": "1.13.1",
     "express": "4.17.1",
