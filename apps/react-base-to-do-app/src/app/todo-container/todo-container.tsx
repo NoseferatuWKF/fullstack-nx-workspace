@@ -9,14 +9,21 @@ export function TodoContainer(props: TodoContainerProps) {
   const [todos, setTodos] = useState<any[]>([])
 
   useEffect( () => {
-      axios.get('http://localhost:3333/api/todos').then(
-      a => setTodos(todos => [...a.data.todos])
+      axios.get('http://localhost:8080/api/todos').then(
+      a => setTodos(todos => [...a.data])
     ).catch(e => console.error(e))
   })
 
   return (
     <div>
-      {todos.map(t => <li key={t.guid}>{t.guid}: {t.task}</li>)}
+      {todos.map(t =>
+      <div className="card">
+        <div className="card-content">
+          <div className="content">
+            <li key={t.id}>{t.id}: {t.task}</li>
+          </div>
+        </div>
+      </div>)}
     </div>
   );
 }
