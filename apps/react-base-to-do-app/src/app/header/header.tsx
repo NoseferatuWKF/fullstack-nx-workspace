@@ -6,7 +6,7 @@ export interface HeaderProps {}
 
 export function Header(props: HeaderProps) {
   return (
-    <nav className="navbar" role="navigation" aria-label="main navigation">
+    <nav style={{position: 'fixed', width: '100%'}} className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a className="navbar-item">
           <Link to="/"><img src="../assets/react-todos.png" alt="Logo" width="112" height="28"></img></Link>

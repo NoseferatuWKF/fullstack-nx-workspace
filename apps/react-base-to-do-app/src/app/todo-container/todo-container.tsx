@@ -1,29 +1,39 @@
-import './todo-container.module.css';
-import axios from 'axios'
+import  './todo-container.module.css';
+import { Todo } from '@nx-workspace/shared/rest-api-interfaces'
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-/* eslint-disable-next-line */
-export interface TodoContainerProps {}
+export interface TodoContainerProps {
+  todo: Todo
+}
 
 export function TodoContainer(props: TodoContainerProps) {
-  const [todos, setTodos] = useState<any[]>([])
 
-  useEffect( () => {
-      axios.get('http://localhost:8080/api/todos').then(
-      a => setTodos(todos => [...a.data])
-    ).catch(e => console.error(e))
-  })
+  const [updatedDate, setUpdatedDate] = useState(props.todo.updatedDate);
 
+  const updateTask = async (todo: Todo) => {
+    await axios.put('http://localhost:8080/api/todos', todo).then(
+    (a => setUpdatedDate(a.data.updatedDate))
+  )}
   return (
     <div>
-      {todos.map(t =>
       <div className="card">
         <div className="card-content">
           <div className="content">
-            <li key={t.id}>{t.id}: {t.task}</li>
+            <h6>{props.todo.task}</h6>
+            <p>Last Updated Date: <strong>{new Date(updatedDate).toString()}</strong></p>
+            <progress className="progress is-primary" value={props.todo.progress} max="100">{props.todo.progress}</progress>
+            <div className="navbar-end buttons">
+              <button onClick={(e) => updateTask(props.todo)} className="button is-primary">
+                <strong>Update</strong>
+              </button>
+              <button className="button is-danger">
+                <strong>Delete</strong>
+              </button>
+            </div>
           </div>
         </div>
-      </div>)}
+      </div>
     </div>
   );
 }
