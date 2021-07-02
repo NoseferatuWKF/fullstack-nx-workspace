@@ -1,7 +1,8 @@
 query launchDetails($id: ID!) {
   launch(id: $id) {
     id
-    mission_namedetails
+    mission_name
+    details
     links {
       flickr_images
       mission_patch

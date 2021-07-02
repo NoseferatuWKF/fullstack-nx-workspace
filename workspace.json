@@ -9,7 +9,9 @@
       "targets": {
         "build": {
           "executor": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/angular-base-graph-ql",
             "index": "apps/angular-base-graph-ql/src/index.html",
@@ -20,7 +22,10 @@
               "apps/angular-base-graph-ql/src/favicon.ico",
               "apps/angular-base-graph-ql/src/assets"
             ],
-            "styles": ["apps/angular-base-graph-ql/src/styles.css"],
+            "styles": [
+              "node_modules/bulma-start/css/main.css",
+              "apps/angular-base-graph-ql/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -56,6 +61,16 @@
           },
           "defaultConfiguration": "production"
         },
+        "generate": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              {
+                "command": "npx graphql-codegen --config apps/angular-base-graph-ql/codegen.yml"
+              }
+            ]
+          }
+        },
         "serve": {
           "executor": "@angular-devkit/build-angular:dev-server",
           "configurations": {
@@ -85,7 +100,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/angular-base-graph-ql"],
+          "outputs": [
+            "coverage/apps/angular-base-graph-ql"
+          ],
           "options": {
             "jestConfig": "apps/angular-base-graph-ql/jest.config.js",
             "passWithNoTests": true
@@ -114,7 +131,63 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/angular-base-graph-ql-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/angular-base-graph-ql-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "data-access": {
+      "projectType": "library",
+      "root": "libs/data-access",
+      "sourceRoot": "libs/data-access/src",
+      "prefix": "nx-workspace",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/data-access"
+          ],
+          "options": {
+            "jestConfig": "libs/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/data-access/src/**/*.ts",
+              "libs/data-access/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "feature-sets": {
+      "projectType": "library",
+      "root": "libs/feature-sets",
+      "sourceRoot": "libs/feature-sets/src",
+      "prefix": "nx-workspace",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/feature-sets"
+          ],
+          "options": {
+            "jestConfig": "libs/feature-sets/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature-sets/src/**/*.ts",
+              "libs/feature-sets/src/**/*.html"
+            ]
           }
         }
       }
@@ -126,12 +199,16 @@
       "targets": {
         "build": {
           "executor": "@nrwl/node:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/node-js-backend-api",
             "main": "apps/node-js-backend-api/src/main.ts",
             "tsConfig": "apps/node-js-backend-api/tsconfig.app.json",
-            "assets": ["apps/node-js-backend-api/src/assets"]
+            "assets": [
+              "apps/node-js-backend-api/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -156,12 +233,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/node-js-backend-api/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/node-js-backend-api/**/*.ts"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/node-js-backend-api"],
+          "outputs": [
+            "coverage/apps/node-js-backend-api"
+          ],
           "options": {
             "jestConfig": "apps/node-js-backend-api/jest.config.js",
             "passWithNoTests": true
@@ -176,7 +257,9 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/react-base-to-do-app",
             "index": "apps/react-base-to-do-app/src/index.html",
@@ -187,7 +270,9 @@
               "apps/react-base-to-do-app/src/favicon.ico",
               "apps/react-base-to-do-app/src/assets"
             ],
-            "styles": ["apps/react-base-to-do-app/src/styles.css"],
+            "styles": [
+              "apps/react-base-to-do-app/src/styles.css"
+            ],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -239,7 +324,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/react-base-to-do-app"],
+          "outputs": [
+            "coverage/apps/react-base-to-do-app"
+          ],
           "options": {
             "jestConfig": "apps/react-base-to-do-app/jest.config.js",
             "passWithNoTests": true
@@ -268,7 +355,9 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/react-base-to-do-app-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/react-base-to-do-app-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -281,12 +370,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/shared/rest-api-interfaces/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/shared/rest-api-interfaces/**/*.ts"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/rest-api-interfaces"],
+          "outputs": [
+            "coverage/libs/shared/rest-api-interfaces"
+          ],
           "options": {
             "jestConfig": "libs/shared/rest-api-interfaces/jest.config.js",
             "passWithNoTests": true

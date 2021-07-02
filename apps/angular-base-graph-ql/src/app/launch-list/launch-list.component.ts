@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { PastLaunchesListGQL } from '../services/spacexGraphql.service';
+import { map } from 'rxjs/operators'
 
 @Component({
   selector: 'nx-workspace-launch-list',
@@ -6,11 +8,12 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   styleUrls: ['./launch-list.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LaunchListComponent implements OnInit {
+export class LaunchListComponent {
 
-  constructor() { }
+  constructor( private launchService: PastLaunchesListGQL) { }
 
-  ngOnInit(): void {
-  }
+  pastLaunches$ = this.launchService.fetch({limit: 30}).pipe(
+    map(a => a.data.launchesPast)
+  )
 
 }
