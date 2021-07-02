@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('angular-base-space-x-graphql', () => {
+describe('angular-base-graph-ql', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {
@@ -8,6 +8,6 @@ describe('angular-base-space-x-graphql', () => {
     cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to angular-base-space-x-graphql!');
+    getGreeting().contains('Welcome to angular-base-graph-ql!');
   });
 });

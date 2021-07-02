@@ -22,22 +22,26 @@
     }
   },
   "projects": {
-    "angular-base-space-x-graphql": {
+    "angular-base-graph-ql": {
       "tags": []
     },
-    "angular-base-space-x-graphql-e2e": {
+    "angular-base-graph-ql-e2e": {
       "tags": [],
-      "implicitDependencies": ["angular-base-space-x-graphql"]
+      "implicitDependencies": ["angular-base-graph-ql"]
     },
     "node-js-backend-api": {
       "tags": []
     },
     "react-base-to-do-app": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["shared-rest-api-interfaces"]
     },
     "react-base-to-do-app-e2e": {
       "tags": [],
       "implicitDependencies": ["react-base-to-do-app"]
+    },
+    "shared-rest-api-interfaces": {
+      "tags": []
     }
   }
 }

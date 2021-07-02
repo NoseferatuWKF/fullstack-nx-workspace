@@ -1,26 +1,26 @@
 {
   "version": 2,
   "projects": {
-    "angular-base-space-x-graphql": {
+    "angular-base-graph-ql": {
       "projectType": "application",
-      "root": "apps/angular-base-space-x-graphql",
-      "sourceRoot": "apps/angular-base-space-x-graphql/src",
+      "root": "apps/angular-base-graph-ql",
+      "sourceRoot": "apps/angular-base-graph-ql/src",
       "prefix": "nx-workspace",
       "targets": {
         "build": {
           "executor": "@angular-devkit/build-angular:browser",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/apps/angular-base-space-x-graphql",
-            "index": "apps/angular-base-space-x-graphql/src/index.html",
-            "main": "apps/angular-base-space-x-graphql/src/main.ts",
-            "polyfills": "apps/angular-base-space-x-graphql/src/polyfills.ts",
-            "tsConfig": "apps/angular-base-space-x-graphql/tsconfig.app.json",
+            "outputPath": "dist/apps/angular-base-graph-ql",
+            "index": "apps/angular-base-graph-ql/src/index.html",
+            "main": "apps/angular-base-graph-ql/src/main.ts",
+            "polyfills": "apps/angular-base-graph-ql/src/polyfills.ts",
+            "tsConfig": "apps/angular-base-graph-ql/tsconfig.app.json",
             "assets": [
-              "apps/angular-base-space-x-graphql/src/favicon.ico",
-              "apps/angular-base-space-x-graphql/src/assets"
+              "apps/angular-base-graph-ql/src/favicon.ico",
+              "apps/angular-base-graph-ql/src/assets"
             ],
-            "styles": ["apps/angular-base-space-x-graphql/src/styles.css"],
+            "styles": ["apps/angular-base-graph-ql/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -39,8 +39,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "apps/angular-base-space-x-graphql/src/environments/environment.ts",
-                  "with": "apps/angular-base-space-x-graphql/src/environments/environment.prod.ts"
+                  "replace": "apps/angular-base-graph-ql/src/environments/environment.ts",
+                  "with": "apps/angular-base-graph-ql/src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -60,10 +60,10 @@
           "executor": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-base-space-x-graphql:build:production"
+              "browserTarget": "angular-base-graph-ql:build:production"
             },
             "development": {
-              "browserTarget": "angular-base-space-x-graphql:build:development"
+              "browserTarget": "angular-base-graph-ql:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,52 +71,50 @@
         "extract-i18n": {
           "executor": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-base-space-x-graphql:build"
+            "browserTarget": "angular-base-graph-ql:build"
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "apps/angular-base-space-x-graphql/src/**/*.ts",
-              "apps/angular-base-space-x-graphql/src/**/*.html"
+              "apps/angular-base-graph-ql/src/**/*.ts",
+              "apps/angular-base-graph-ql/src/**/*.html"
             ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/angular-base-space-x-graphql"],
+          "outputs": ["coverage/apps/angular-base-graph-ql"],
           "options": {
-            "jestConfig": "apps/angular-base-space-x-graphql/jest.config.js",
+            "jestConfig": "apps/angular-base-graph-ql/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "angular-base-space-x-graphql-e2e": {
-      "root": "apps/angular-base-space-x-graphql-e2e",
-      "sourceRoot": "apps/angular-base-space-x-graphql-e2e/src",
+    "angular-base-graph-ql-e2e": {
+      "root": "apps/angular-base-graph-ql-e2e",
+      "sourceRoot": "apps/angular-base-graph-ql-e2e/src",
       "projectType": "application",
       "targets": {
         "e2e": {
           "executor": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/angular-base-space-x-graphql-e2e/cypress.json",
-            "tsConfig": "apps/angular-base-space-x-graphql-e2e/tsconfig.e2e.json",
-            "devServerTarget": "angular-base-space-x-graphql:serve:development"
+            "cypressConfig": "apps/angular-base-graph-ql-e2e/cypress.json",
+            "tsConfig": "apps/angular-base-graph-ql-e2e/tsconfig.e2e.json",
+            "devServerTarget": "angular-base-graph-ql:serve:development"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-base-space-x-graphql:serve:production"
+              "devServerTarget": "angular-base-graph-ql:serve:production"
             }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/angular-base-space-x-graphql-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/angular-base-graph-ql-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -271,6 +269,27 @@
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/react-base-to-do-app-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "shared-rest-api-interfaces": {
+      "root": "libs/shared/rest-api-interfaces",
+      "sourceRoot": "libs/shared/rest-api-interfaces/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/shared/rest-api-interfaces/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/rest-api-interfaces"],
+          "options": {
+            "jestConfig": "libs/shared/rest-api-interfaces/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'angular-base-space-x-graphql',
+  displayName: 'angular-base-graph-ql',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/apps/angular-base-space-x-graphql',
+  coverageDirectory: '../../coverage/apps/angular-base-graph-ql',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },

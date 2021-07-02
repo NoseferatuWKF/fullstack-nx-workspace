@@ -2,6 +2,7 @@ module.exports = {
   projects: [
     '<rootDir>/apps/react-base-to-do-app',
     '<rootDir>/apps/node-js-backend-api',
-    '<rootDir>/apps/angular-base-space-x-graphql',
+    '<rootDir>/libs/shared/rest-api-interfaces',
+    '<rootDir>/apps/angular-base-graph-ql',
   ],
 };
