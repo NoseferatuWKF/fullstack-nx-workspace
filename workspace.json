@@ -192,9 +192,9 @@
         }
       }
     },
-    "node-js-backend-api": {
-      "root": "apps/node-js-backend-api",
-      "sourceRoot": "apps/node-js-backend-api/src",
+    "nest-graphql": {
+      "root": "apps/nest-graphql",
+      "sourceRoot": "apps/nest-graphql/src",
       "projectType": "application",
       "targets": {
         "build": {
@@ -203,11 +203,11 @@
             "{options.outputPath}"
           ],
           "options": {
-            "outputPath": "dist/apps/node-js-backend-api",
-            "main": "apps/node-js-backend-api/src/main.ts",
-            "tsConfig": "apps/node-js-backend-api/tsconfig.app.json",
+            "outputPath": "dist/apps/nest-graphql",
+            "main": "apps/nest-graphql/src/main.ts",
+            "tsConfig": "apps/nest-graphql/tsconfig.app.json",
             "assets": [
-              "apps/node-js-backend-api/src/assets"
+              "apps/nest-graphql/src/assets"
             ]
           },
           "configurations": {
@@ -217,8 +217,8 @@
               "inspect": false,
               "fileReplacements": [
                 {
-                  "replace": "apps/node-js-backend-api/src/environments/environment.ts",
-                  "with": "apps/node-js-backend-api/src/environments/environment.prod.ts"
+                  "replace": "apps/nest-graphql/src/environments/environment.ts",
+                  "with": "apps/nest-graphql/src/environments/environment.prod.ts"
                 }
               ]
             }
@@ -227,24 +227,24 @@
         "serve": {
           "executor": "@nrwl/node:execute",
           "options": {
-            "buildTarget": "node-js-backend-api:build"
+            "buildTarget": "nest-graphql:build"
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "apps/node-js-backend-api/**/*.ts"
+              "apps/nest-graphql/**/*.ts"
             ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
           "outputs": [
-            "coverage/apps/node-js-backend-api"
+            "coverage/apps/nest-graphql"
           ],
           "options": {
-            "jestConfig": "apps/node-js-backend-api/jest.config.js",
+            "jestConfig": "apps/nest-graphql/jest.config.js",
             "passWithNoTests": true
           }
         }

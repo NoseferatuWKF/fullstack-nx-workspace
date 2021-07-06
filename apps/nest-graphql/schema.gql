@@ -1,0 +1,46 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Cars {
+  engine: Engine
+  id: Int!
+  manufacturer: String
+  name: String
+}
+
+input CarsInput {
+  engine: EngineInput
+  id: Int!
+  manufacturer: String
+  name: String
+}
+
+type Engine {
+  displacement: Int
+  horsePower: Int
+  id: Int!
+  manufacturer: String
+  name: String
+  torque: Int
+}
+
+input EngineInput {
+  displacement: Int
+  horsePower: Int
+  id: Int!
+  manufacturer: String
+  name: String
+  torque: Int
+}
+
+type Mutation {
+  createCar(car: CarsInput!): Cars!
+  deleteCar(id: Int!): Cars!
+  swapEngine(engine: String!, id: Int!): Cars!
+}
+
+type Query {
+  car(id: Int!): Cars!
+  cars: [Cars!]!
+}

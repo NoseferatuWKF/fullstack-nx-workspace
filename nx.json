@@ -35,7 +35,7 @@
     "feature-sets": {
       "tags": []
     },
-    "node-js-backend-api": {
+    "nest-graphql": {
       "tags": []
     },
     "react-base-to-do-app": {
