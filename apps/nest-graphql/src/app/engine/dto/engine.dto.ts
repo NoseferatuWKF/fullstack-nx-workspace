@@ -1,9 +1,7 @@
-import { Field, InputType, Int } from '@nestjs/graphql';
+import { Field, Int, ObjectType } from '@nestjs/graphql';
 
-@InputType()
-export class EngineInput {
-  @Field(() => Int)
-  id?: number;
+@ObjectType()
+export class Engine {
 
   @Field({ nullable: true })
   manufacturer?: string;

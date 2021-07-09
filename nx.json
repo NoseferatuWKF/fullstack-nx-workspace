@@ -29,12 +29,6 @@
       "tags": [],
       "implicitDependencies": ["angular-base-graph-ql"]
     },
-    "data-access": {
-      "tags": []
-    },
-    "feature-sets": {
-      "tags": []
-    },
     "nest-graphql": {
       "tags": []
     },

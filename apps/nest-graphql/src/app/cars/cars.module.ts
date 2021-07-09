@@ -5,4 +5,5 @@ import { CarsService } from './cars.service';
 @Module({
   providers: [CarsResolver, CarsService],
 })
-export class CarsModule {}
+export class CarsModule {
+}

@@ -1,10 +1,8 @@
 import { Field, InputType, Int } from '@nestjs/graphql';
-import { EngineInput } from './engine.input';
+import { EngineInput } from '../../engine/inputs/engine.input';
 
 @InputType()
 export class CarsInput {
-  @Field(() => Int)
-  id: number;
 
   @Field({ nullable: true })
   manufacturer?: string;

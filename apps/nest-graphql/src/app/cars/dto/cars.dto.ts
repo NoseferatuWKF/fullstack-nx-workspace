@@ -1,10 +1,8 @@
-import { Field, Int, ObjectType } from '@nestjs/graphql';
-import { Engine } from './engine.dto';
+import { Field, ObjectType } from '@nestjs/graphql';
+import { Engine } from '../../engine/dto/engine.dto';
 
 @ObjectType()
 export class Cars {
-  @Field(() => Int)
-  id: number;
 
   @Field({ nullable: true })
   manufacturer?: string;
