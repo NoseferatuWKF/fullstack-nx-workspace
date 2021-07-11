@@ -1,12 +1,12 @@
 # Where to get schema data
 schema:
-  - https://api.spacex.land/graphql/
+  - http://localhost:3333/graphql/
 # The client side queries to turn into services
 documents:
   - apps/angular-base-graph-ql/src/**/*.graphql
 # Where to output the services and the list of plugins
 generates:
-  apps/angular-base-graph-ql/src/app/services/spacexGraphql.service.ts:
+  apps/angular-base-graph-ql/src/app/services/graphql.service.ts:
     plugins:
       - typescript
       - typescript-operations

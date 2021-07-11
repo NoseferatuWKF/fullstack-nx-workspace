@@ -13,8 +13,11 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
-      Documentation
+      <a class="navbar-item" [routerLink]="['./cars']">
+      Cars
+      </a>
+      <a class="navbar-item" [routerLink]="['./engines']">
+      Engines
       </a>
 
       <div class="navbar-item has-dropdown is-hoverable">

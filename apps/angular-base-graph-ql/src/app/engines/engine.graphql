@@ -1,0 +1,13 @@
+query engineList($size: Int, $cursor: String) {
+  engines(_size: $size, _cursor: $cursor) {
+    data {
+      name
+      displacement
+      horsePower
+      torque
+      manufacturer
+    }
+    after
+    before
+  }
+}

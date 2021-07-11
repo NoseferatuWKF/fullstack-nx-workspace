@@ -10,7 +10,14 @@ export class CarsResolver {
   ) {}
 
   @Query(() => [Cars])
-  async cars() {
-    return await this.carsService.getCars();
+  async cars(@Args('_size') size: number, @Args('_cursor') cursor: string) {
+    return await this.carsService.getCars(size, cursor).then(a => {
+      const obj = {
+        data: []
+      }
+      console.log(a.data.map(d => d.data.engine))
+      a.data.forEach(d => obj.data.push(d.data))
+      return obj
+    });
   }
 }

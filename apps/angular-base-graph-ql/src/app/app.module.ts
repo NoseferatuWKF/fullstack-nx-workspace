@@ -3,15 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
-import { LaunchListComponent } from './launch-list/launch-list.component';
-import { LaunchDetailsComponent } from './launch-details/launch-details.component';
 import { appRoutes } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { GraphQLModule } from './graphql.module';
+import { CarsComponent } from './cars/cars.component';
+import { EnginesComponent } from './engines/engines.component';
 
 @NgModule({
-  declarations: [AppComponent, LaunchListComponent, LaunchDetailsComponent],
+  declarations: [AppComponent, CarsComponent, EnginesComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

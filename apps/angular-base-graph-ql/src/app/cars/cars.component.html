@@ -1,0 +1,19 @@
+<ng-container *ngIf="cars$ | async as cars">
+  <main class="container">
+    <section class="tile is-ancestor">
+      <div class="tile is-vertical is-parent">
+        <div *ngFor="let c of cars" class="card route tile is-child box">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">{{ c.name }}</p>
+                <p class="subtitle is-6">{{ c.manufacturer }}</p>
+                <p class="subtitle is-6">{{ c.engine }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</ng-container>

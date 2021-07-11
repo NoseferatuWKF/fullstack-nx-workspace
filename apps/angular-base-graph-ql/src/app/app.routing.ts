@@ -1,14 +1,14 @@
 import { Routes } from "@angular/router";
-import { LaunchDetailsComponent } from "./launch-details/launch-details.component";
-import { LaunchListComponent } from "./launch-list/launch-list.component";
+import { CarsComponent } from "./cars/cars.component";
+import { EnginesComponent } from "./engines/engines.component";
 
 export const appRoutes: Routes = [
   {
-    path: '',
-    component: LaunchListComponent
+    path: 'cars',
+    component: CarsComponent
   },
   {
-    path: ':id',
-    component: LaunchDetailsComponent
+    path: 'engines',
+    component: EnginesComponent
   }
 ]

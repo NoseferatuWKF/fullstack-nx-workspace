@@ -1,0 +1,17 @@
+query carsList($size: Int, $cursor: String) {
+  cars(_size: $size, _cursor: $cursor) {
+    data {
+      name
+      manufacturer
+      engine {
+        name
+        displacement
+        horsePower
+        torque
+        manufacturer
+      }
+    }
+    after
+    before
+  }
+}

@@ -15,8 +15,8 @@ export class CarsService {
     // return this.cars.find(c => c.id === car.id)
   }
 
-  async getCars() : Promise<FaunaCollectionResponse<FaunaResponse<Cars>[]>> {
-    const query = q.Map(q.Paginate(q.Documents(q.Collection('Cars'))), q.Lambda(x => q.Get(x)))
+  async getCars(size: number, cursor: string) : Promise<FaunaCollectionResponse<FaunaResponse<Cars>[]>> {
+    const query = q.Map(q.Paginate(q.Documents(q.Collection('Cars'))), q.Lambda(x => q.Get(q.Var('engine'))))
     return await this.client.query(query);
   }
 

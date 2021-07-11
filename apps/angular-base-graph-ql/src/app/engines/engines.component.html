@@ -1,0 +1,21 @@
+<ng-container *ngIf="engines$ | async as engines">
+  <main class="container">
+    <section class="tile is-ancestor">
+      <div class="tile is-vertical is-parent">
+        <div *ngFor="let e of engines" class="card route tile is-child box">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">{{ e.name }}</p>
+                <p class="subtitle is-6">{{ e.manufacturer }}</p>
+                <p class="subtitle is-6"><strong>Displacement:</strong> {{ e.displacement }}</p>
+                <p class="subtitle is-6"><strong>Horsepower:</strong> {{ e.horsePower }}</p>
+                <p class="subtitle is-6"><strong>Torque:</strong> {{ e.torque }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</ng-container>
