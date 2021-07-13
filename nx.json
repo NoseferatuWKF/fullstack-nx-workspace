@@ -32,6 +32,13 @@
     "nest-graphql": {
       "tags": []
     },
+    "portfolio": {
+      "tags": []
+    },
+    "portfolio-e2e": {
+      "tags": [],
+      "implicitDependencies": ["portfolio"]
+    },
     "react-base-to-do-app": {
       "tags": [],
       "implicitDependencies": ["shared-rest-api-interfaces"]
