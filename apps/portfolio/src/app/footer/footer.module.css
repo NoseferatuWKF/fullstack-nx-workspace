@@ -1,0 +1,6 @@
+.stacks {
+  display: inline-flex;
+}
+.stacks > li {
+  margin-right: 1rem;
+}

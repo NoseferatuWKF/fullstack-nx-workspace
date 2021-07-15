@@ -1,0 +1,5 @@
+.tech-stack {
+  display: flex;
+  flex-flow: wrap;
+  gap: 1rem;
+}
