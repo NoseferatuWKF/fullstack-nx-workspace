@@ -1,4 +1,6 @@
+import * as db from 'db.json';
+
 export const environment = {
   production: false,
-  faunaSecret: 'fnAENtFe6oACC0K5oE60C516hoIztUOWjYfyjuz3'
+  faunaSecret: db.fauna
 };
