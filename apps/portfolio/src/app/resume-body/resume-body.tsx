@@ -10,7 +10,7 @@ export function ResumeBody() {
                 <p>Wavelet Solutions Sdn Bhd</p>
               </div>
               <div className="message-body">
-              {/* Assistant Manager | Software Developer */}
+                ...
               </div>
             </article>
             <article className="message is-link">
@@ -18,7 +18,7 @@ export function ResumeBody() {
                 <p>Prudential Assurance Malaysia Berhad</p>
               </div>
               <div className="message-body">
-              Executive Management Trainee
+                ...
               </div>
             </article>
             <article className="message is-link">
@@ -26,7 +26,7 @@ export function ResumeBody() {
                 <p>BMW Malaysia</p>
               </div>
               <div className="message-body">
-              Apprentice
+                ...
               </div>
             </article>
             <article className="message is-link">
@@ -34,7 +34,7 @@ export function ResumeBody() {
                 <p>UiTM</p>
               </div>
               <div className="message-body">
-              Assistant Engineer
+                ...
               </div>
             </article>
           </article>
