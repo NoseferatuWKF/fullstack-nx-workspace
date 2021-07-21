@@ -10,7 +10,7 @@ export function ResumeBody() {
                 <p>Wavelet Solutions Sdn Bhd</p>
               </div>
               <div className="message-body">
-              Assistant Manager | Software Developer
+              {/* Assistant Manager | Software Developer */}
               </div>
             </article>
             <article className="message is-link">
