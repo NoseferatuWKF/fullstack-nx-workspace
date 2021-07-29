@@ -12,10 +12,33 @@ import mysql from '../../assets/mysql.svg';
 import postgresql from '../../assets/postgresql.svg';
 import nestjs from '../../assets/nestjs.svg';
 import spring from '../../assets/spring.svg';
+import fauna from '../../assets/fauna.svg';
+import terraform from '../../assets/terraform.svg';
 
-import styles from './skill-set.module.css'
+import styles from './skill-set.module.css';
+import { useState } from 'react';
+import ReactTooltip from 'react-tooltip';
 
 export function SkillSet() {
+  const [skills] = useState([
+    ['Angular', angular],
+    ['React', react],
+    ['Node.js', nodejs],
+    ['Unity', unity],
+    ['AWS', aws],
+    ['Django', django],
+    ['Docker', docker],
+    ['Dotnet', dotnet],
+    ['GraphQL', graphql],
+    ['MongoDB', mongodb],
+    ['MySQL', mysql],
+    ['PostgreSQL', postgresql],
+    ['Nest.js', nestjs],
+    ['Spring', spring],
+    ['FaunaDB', fauna],
+    ['Terraform', terraform],
+  ]);
+
   return (
     <section className="tile is-parent">
       <section className="tile card">
@@ -86,10 +109,18 @@ export function SkillSet() {
                 ></progress>
               </li>
               <li className="is-size-7 is-uppercase has-text-weight-semibold">
-                E-COMMERCE
+                E-Commerce
                 <progress
                   className="progress is-small is-link"
                   value="60"
+                  max="100"
+                ></progress>
+              </li>
+              <li className="is-size-7 is-uppercase has-text-weight-semibold">
+                Machine Learning / AI
+                <progress
+                  className="progress is-small is-link"
+                  value="40"
                   max="100"
                 ></progress>
               </li>
@@ -98,132 +129,20 @@ export function SkillSet() {
           <span className="section">
             <p className="subtitle">Tech Stack</p>
             <ul className={styles['tech-stack']}>
-              <li>
-                <img
-                  className="image is-24x24"
-                  data-tip
-                  data-for="angular"
-                  src={angular}
-                  alt="angular"
-                />
-              </li>
-              <li>
-                <img
-                  className="image is-24x24"
-                  data-tip
-                  data-for="react"
-                  src={react}
-                  alt="react"
-                />
-              </li>
-              <li>
-                <img
-                  className="image is-24x24"
-                  data-tip
-                  data-for="nodejs"
-                  src={nodejs}
-                  alt="nodejs"
-                />
-              </li>
-              <li>
-                <img
-                  className="image is-24x24"
-                  data-tip
-                  data-for="nestjs"
-                  src={nestjs}
-                  alt="nestjs"
-                />
-              </li>
-              <li>
-                <img
-                  className="image is-24x24"
-                  data-tip
-                  data-for="spring"
-                  src={spring}
-                  alt="spring"
-                />
-              </li>
-              <li>
-                <img
-                  className="image is-24x24"
-                  data-tip
-                  data-for="unity"
-                  src={unity}
-                  alt="unity"
-                />
-              </li>
-              <li>
-                <img
-                  className="image is-24x24"
-                  data-tip
-                  data-for="django"
-                  src={django}
-                  alt="django"
-                />
-              </li>
-              <li>
-                <img
-                  className="image is-24x24"
-                  data-tip
-                  data-for="dotnet"
-                  src={dotnet}
-                  alt="dotnet"
-                />
-              </li>
-              <li>
-                <img
-                  className="image is-24x24"
-                  data-tip
-                  data-for="docker"
-                  src={docker}
-                  alt="docker"
-                />
-              </li>
-              <li>
-                <img
-                  className="image is-24x24"
-                  data-tip
-                  data-for="graphql"
-                  src={graphql}
-                  alt="graphql"
-                />
-              </li>
-              <li>
-                <img
-                  className="image is-24x24"
-                  data-tip
-                  data-for="aws"
-                  src={aws}
-                  alt="aws"
-                />
-              </li>
-              <li>
-                <img
-                  className="image is-24x24"
-                  data-tip
-                  data-for="mongodb"
-                  src={mongodb}
-                  alt="mongodb"
-                />
-              </li>
-              <li>
-                <img
-                  className="image is-24x24"
-                  data-tip
-                  data-for="mysql"
-                  src={mysql}
-                  alt="mysql"
-                />
-              </li>
-              <li>
-                <img
-                  className="image is-24x24"
-                  data-tip
-                  data-for="postgresql"
-                  src={postgresql}
-                  alt="postgresql"
-                />
-              </li>
+              {skills.map((s) => (
+                <li>
+                  <img
+                    className="image is-24x24"
+                    data-tip
+                    data-for={s[0]}
+                    src={s[1]}
+                    alt={s[0]}
+                  />
+                  <ReactTooltip id={s[0]} place="top" effect="solid">
+                    {s[0]}
+                  </ReactTooltip>
+                </li>
+              ))}
             </ul>
           </span>
         </article>

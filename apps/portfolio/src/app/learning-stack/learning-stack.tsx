@@ -9,9 +9,6 @@ export function LearningStack () {
           <span className="section">
             <ul className={styles['tech-stack']}>
               <li>
-                <span className="tag is-link">FaunaDB</span>
-              </li>
-              <li>
                 <span className="tag is-link">Web Assembly</span>
               </li>
               <li>
@@ -34,6 +31,9 @@ export function LearningStack () {
               </li>
               <li>
                 <span className="tag is-link">Flutter</span>
+              </li>
+              <li>
+                <span className="tag is-link">Kubernetes</span>
               </li>
             </ul>
           </span>
