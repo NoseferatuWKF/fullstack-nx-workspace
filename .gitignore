@@ -1,7 +1,10 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
+# only take portfolio
+dist/apps/*
+!dist/apps/portfolio
+
 /tmp
 /out-tsc
 
