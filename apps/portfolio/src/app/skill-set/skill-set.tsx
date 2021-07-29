@@ -59,6 +59,43 @@ export function SkillSet() {
             </ul>
           </span>
           <span className="section">
+            <p className="subtitle">Industry Knowledge</p>
+            <ul>
+              <li className="is-size-7 is-uppercase has-text-weight-semibold">
+                ERP
+                <progress
+                  className="progress is-small is-link "
+                  value="75"
+                  max="100"
+                ></progress>
+              </li>
+              <li className="is-size-7 is-uppercase has-text-weight-semibold">
+                CMS
+                <progress
+                  className="progress is-small is-link"
+                  value="60"
+                  max="100"
+                ></progress>
+              </li>
+              <li className="is-size-7 is-uppercase has-text-weight-semibold">
+                CRM
+                <progress
+                  className="progress is-small is-link"
+                  value="50"
+                  max="100"
+                ></progress>
+              </li>
+              <li className="is-size-7 is-uppercase has-text-weight-semibold">
+                E-COMMERCE
+                <progress
+                  className="progress is-small is-link"
+                  value="60"
+                  max="100"
+                ></progress>
+              </li>
+            </ul>
+          </span>
+          <span className="section">
             <p className="subtitle">Tech Stack</p>
             <ul className={styles['tech-stack']}>
               <li>
